@@ -1,0 +1,28 @@
+#SHH to nour and cd to the workspace in nour and to the CamPub package
+
+cd catkin_ws/src/CamPub
+
+#run Camera Publisher package
+
+python CamPub.py
+
+####
+# Fisrt Open 2-Terminals and Export some Variables to run ros core on the robot in this two terminals
+####
+export ROS_IP="YourIP"
+export ROS_HOSTNAME="YourIP"
+export ROS_MASTER_URI=http://192.168.0.193:113
+
+#Then cd to the package file 
+
+cd catkin_ws/src/face_info-master/scripts/
+
+#then run to ros Nodes FaceDetection and Emotion Print
+
+#At first terminal write 
+
+python3 Detection_Node.py
+
+#At Second terminal write 
+
+python3 EmotionPrint.py
